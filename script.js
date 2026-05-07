@@ -195,16 +195,16 @@ function makeCarousel(opts) {
 }
 
 const portData = [
-  { cat: 'mockup', meta: 'Mockup', img: 'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=700&q=80', catLabel: 'Product Mockup', name: 'URBAN ESSENTIALS' },
-  { cat: 'logo', meta: 'Logo', img: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80', catLabel: 'Logo Design', name: 'APEX STUDIOS' },
-  { cat: 'flyer', meta: 'Flyer', img: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80', catLabel: 'Event Flyer', name: 'NEON NIGHTS' },
-  { cat: 'tshirt', meta: 'T-Shirt', img: 'https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80', catLabel: 'T-Shirt Mockup', name: 'STREETWEAR DROP' },
-  { cat: 'branding', meta: 'Branding', img: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80', catLabel: 'Brand Identity', name: 'LUXE COSMETICS' },
-  { cat: 'branding', meta: 'Brand Pack', img: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=700&q=80', catLabel: 'Branding Pack', name: 'VOLTA AGENCY' },
-  { cat: 'social', meta: 'Social', img: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=700&q=80', catLabel: 'Social Media Kit', name: 'PULSE NUTRITION' },
-  { cat: 'packaging', meta: 'Packaging', img: 'https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=600&q=80', catLabel: 'Packaging Design', name: 'MATCHA RITUAL' },
-  { cat: 'flyer', meta: 'Flyer', img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80', catLabel: 'Event Flyer', name: 'SUMMIT CONFERENCE' },
-  { cat: 'mockup', meta: 'Mockup', img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80', catLabel: 'Product Mockup', name: 'SCENT COLLECTION' },
+  { cat: 'mockup', meta: 'Mockup', img: 'Images/main-images/mockup.jpeg', catLabel: 'Product Mockup', name: '' },
+  { cat: 'logo', meta: 'Logo', img: 'Images/main-images/logodesign.jpeg', catLabel: 'Logo Design', name: '' },
+  { cat: 'flyer', meta: 'Flyer', img: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80', catLabel: 'Event Flyer', name: '' },
+  { cat: 'tshirt', meta: 'T-Shirt', img: 'Images/main-images/tshirt-mockup.png', catLabel: 'T-Shirt Mockup', name: '' },
+  { cat: 'branding', meta: 'Branding', img: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80', catLabel: 'Brand Identity', name: '' },
+  { cat: 'flyer', meta: 'Flyer', img: 'Images/main-images/flyer1.jpeg', catLabel: 'Event Flyer', name: '' },
+  { cat: 'social', meta: 'Social', img: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=700&q=80', catLabel: 'Social Media Kit', name: '' },
+  { cat: 'packaging', meta: 'Packaging', img: 'https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=600&q=80', catLabel: 'Packaging Design', name: '' },
+  { cat: 'bgremove', meta: 'BG Remove', img: 'Images/main-images/emma.png', catLabel: 'Background Removal', name: '' },
+  { cat: 'mockup', meta: 'Mockup', img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80', catLabel: 'Product Mockup', name: '' },
   { cat: 'branding', meta: 'Full Brand', img: 'https://images.unsplash.com/photo-1621600411688-4be93cd68504?w=900&q=80', catLabel: 'Complete Branding', name: 'NORTHWAVE COLLECTIVE', special: true },
 ];
 
@@ -232,8 +232,8 @@ const portCarousel = makeCarousel({
     }
     return `<div class="port-card carousel-card-size" data-cat="${p.cat}">
       <span class="port-meta">${p.meta}</span>
-      <img class="port-img" src="${p.img}" alt="${p.name}" loading="lazy" style="aspect-ratio:4/3;"/>
-      <div class="port-overlay"><div class="port-category">${p.catLabel}</div><div class="port-name">${p.name}</div><div class="port-arrow">→</div></div>
+      <img class="port-img" src="${p.img}" alt="${p.catLabel}" loading="lazy" style="aspect-ratio:4/3;"/>
+      <div class="port-overlay"><div class="port-category">${p.catLabel}</div>${p.name ? `<div class="port-name">${p.name}</div><div class="port-arrow">→</div>` : ''}</div>
     </div>`;
   }
 });
@@ -295,4 +295,22 @@ let rt;
 window.addEventListener('resize', () => {
   clearTimeout(rt);
   rt = setTimeout(initCarousels, 250);
+});
+
+function openLightbox(imgSrc) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  lightboxImg.src = imgSrc;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
 });

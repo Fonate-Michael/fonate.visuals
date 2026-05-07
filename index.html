@@ -60,12 +60,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-img-grid">
-      <img class="tall" src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80" alt="Design"/>
-      <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Design"/>
-      <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=600&q=80" alt="Design"/>
-    </div>
-    <div class="hero-bg-text">KR</div>
+    <div class="hero-bg-text">FV</div>
   </div>
 </section>
 
@@ -108,20 +103,21 @@
       <button class="filter-btn" data-i18n="portfolio.filterTshirt" onclick="filterWork(this,'tshirt')">T-Shirt</button>
       <button class="filter-btn" data-i18n="portfolio.filterSocial" onclick="filterWork(this,'social')">Social Media</button>
       <button class="filter-btn" data-i18n="portfolio.filterPackaging" onclick="filterWork(this,'packaging')">Packaging</button>
+      <button class="filter-btn" data-i18n="portfolio.filterBgRemove" onclick="filterWork(this,'bgremove')">BG Remove</button>
     </div>
   </div>
 
   <div class="portfolio-grid" id="portfolio-grid">
-    <div class="port-card wide reveal" data-cat="mockup"><span class="port-meta">Mockup</span><img class="port-img" src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=900&q=80" alt="Mockup"/><div class="port-overlay"><div class="port-category">Product Mockup</div><div class="port-name">URBAN ESSENTIALS</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card medium reveal" data-cat="logo"><span class="port-meta">Logo</span><img class="port-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80" alt="Logo"/><div class="port-overlay"><div class="port-category">Logo Design</div><div class="port-name">APEX STUDIOS</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card third reveal" data-cat="flyer"><span class="port-meta">Flyer</span><img class="port-img" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="Flyer"/><div class="port-overlay"><div class="port-category">Event Flyer</div><div class="port-name">NEON NIGHTS</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card third reveal" data-cat="tshirt"><span class="port-meta">T-Shirt</span><img class="port-img" src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80" alt="TShirt"/><div class="port-overlay"><div class="port-category">T-Shirt Mockup</div><div class="port-name">STREETWEAR DROP</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card third reveal" data-cat="branding"><span class="port-meta">Branding</span><img class="port-img" src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80" alt="Branding"/><div class="port-overlay"><div class="port-category">Brand Identity</div><div class="port-name">LUXE COSMETICS</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card half reveal" data-cat="branding"><span class="port-meta">Branding Pack</span><img class="port-img" src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80" alt="Branding Pack"/><div class="port-overlay"><div class="port-category">Branding Pack</div><div class="port-name">VOLTA AGENCY</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card half reveal" data-cat="social"><span class="port-meta">Social Media</span><img class="port-img" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&q=80" alt="Social"/><div class="port-overlay"><div class="port-category">Social Media Kit</div><div class="port-name">PULSE NUTRITION</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card third reveal" data-cat="packaging"><span class="port-meta">Packaging</span><img class="port-img" src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=600&q=80" alt="Packaging"/><div class="port-overlay"><div class="port-category">Packaging Design</div><div class="port-name">MATCHA RITUAL</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card third reveal" data-cat="flyer"><span class="port-meta">Flyer</span><img class="port-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Flyer2"/><div class="port-overlay"><div class="port-category">Event Flyer</div><div class="port-name">SUMMIT CONFERENCE</div><div class="port-arrow">→</div></div></div>
-    <div class="port-card third reveal" data-cat="mockup"><span class="port-meta">Mockup</span><img class="port-img" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80" alt="Mockup2"/><div class="port-overlay"><div class="port-category">Product Mockup</div><div class="port-name">SCENT COLLECTION</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card wide reveal" data-cat="mockup" onclick="openLightbox('Images/main-images/mockup.jpeg')"><span class="port-meta">Mockup</span><img class="port-img" src="Images/main-images/mockup.jpeg" alt="Mockup"/><div class="port-overlay"><div class="port-category">Product Mockup</div></div><button class="port-view-btn">Click to View Full</button></div>
+    <div class="port-card medium reveal" data-cat="logo" onclick="openLightbox('Images/main-images/logodesign.jpeg')"><span class="port-meta">Logo</span><img class="port-img" src="Images/main-images/logodesign.jpeg" alt="Logo"/><div class="port-overlay"><div class="port-category">Logo Design</div></div><button class="port-view-btn">Click to View Full</button></div>
+    <div class="port-card third reveal" data-cat="flyer"><span class="port-meta">Flyer</span><img class="port-img" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="Flyer"/><div class="port-overlay"><div class="port-category">Event Flyer</div></div></div>
+    <div class="port-card third reveal" data-cat="tshirt" onclick="openLightbox('Images/main-images/tshirt-mockup.png')"><span class="port-meta">T-Shirt</span><img class="port-img" src="Images/main-images/tshirt-mockup.png" alt="TShirt"/><div class="port-overlay"><div class="port-category">T-Shirt Mockup</div></div><button class="port-view-btn">Click to View Full</button></div>
+    <div class="port-card third reveal" data-cat="branding"><span class="port-meta">Branding</span><img class="port-img" src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80" alt="Branding"/><div class="port-overlay"><div class="port-category">Brand Identity</div></div></div>
+    <div class="port-card half reveal" data-cat="flyer" onclick="openLightbox('Images/main-images/flyer1.jpeg')"><span class="port-meta">Flyer</span><img class="port-img" src="Images/main-images/flyer1.jpeg" alt="Flyer"/><div class="port-overlay"><div class="port-category">Event Flyer</div></div><button class="port-view-btn">Click to View Full</button></div>
+    <div class="port-card half reveal" data-cat="social"><span class="port-meta">Social Media</span><img class="port-img" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&q=80" alt="Social"/><div class="port-overlay"><div class="port-category">Social Media Kit</div></div></div>
+    <div class="port-card third reveal" data-cat="packaging"><span class="port-meta">Packaging</span><img class="port-img" src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=600&q=80" alt="Packaging"/><div class="port-overlay"><div class="port-category">Packaging Design</div></div></div>
+    <div class="port-card third reveal" data-cat="bgremove" onclick="openLightbox('Images/main-images/emma.png')"><span class="port-meta">BG Remove</span><img class="port-img" src="Images/main-images/emma.png" alt="Background Removal"/><div class="port-overlay"><div class="port-category">Background Removal</div></div><button class="port-view-btn">Click to View Full</button></div>
+    <div class="port-card third reveal" data-cat="mockup"><span class="port-meta">Mockup</span><img class="port-img" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80" alt="Mockup2"/><div class="port-overlay"><div class="port-category">Product Mockup</div></div></div>
     <div class="port-card full reveal special-card" data-cat="branding" onclick="window.location.href='branding-showcase.html'">
       <span class="port-meta">Full Brand Identity</span>
       <img class="port-img" src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?w=1400&q=80" alt="Full Brand"/>
@@ -174,7 +170,7 @@
 <section id="about">
   <div class="about-section">
     <div class="about-img-wrap reveal">
-      <img class="about-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Designer"/>
+      <img class="about-img" src="Images/main-images/me.png" alt="Designer"/>
       <div class="about-img-badge"><span class="big">5+</span><span class="sm" data-i18n="about.badge">YRS EXP</span></div>
     </div>
     <div class="about-content reveal">
@@ -231,6 +227,14 @@
   <div class="footer-text"><span data-i18n="footer.copyright">© </span><span id="currentYear"></span><span data-i18n="footer.copyrightText"> Fonate Visuals. All rights reserved.</span></div>
   <div class="footer-text" data-i18n="footer.tagline">Made by Fonate Michael</div>
 </footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <img src="" alt="Full size" class="lightbox-img" id="lightboxImg"/>
+  </div>
+  <div class="lightbox-overlay-text">Press ESC or click outside to close</div>
+</div>
 
 <script src="script.js"></script>
 </body>

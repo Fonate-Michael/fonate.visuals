@@ -27,6 +27,19 @@ function updatePageContent() {
       element.textContent = value;
     }
   });
+  if (window.innerWidth <= 768) {
+    svcCarousel.render();
+  }
+}
+
+function getTranslation(key) {
+  const keys = key.split('.');
+  let value = translations;
+  for (const k of keys) {
+    value = value[k];
+    if (!value) return null;
+  }
+  return value;
 }
 
 function updateLangButtons() {
@@ -239,12 +252,12 @@ const portCarousel = makeCarousel({
 });
 
 const svcData = [
-  { num: '01', icon: '<i class="fa-solid fa-image"></i>', title: 'Mockup Design', desc: 'Photorealistic product mockups — packaging, phones, apparel to print.', tags: ['Product', '3D', 'Print'] },
-  { num: '02', icon: '<i class="fa-solid fa-file-lines"></i>', title: 'Flyer Design', desc: 'Eye-stopping event flyers and printed marketing assets.', tags: ['Events', 'Print', 'Digital'] },
+  { num: '01', icon: '<i class="fa-solid fa-image"></i>', title: 'Mockup Design', desc: 'Photorealistic product mockups from packaging to phones, apparel to print.', tags: ['Product', '3D', 'Print'] },
+  { num: '02', icon: '<i class="fa-solid fa-file-lines"></i>', title: 'Flyer Design', desc: 'Eye-stopping event flyers and printed marketing assets that demand attention.', tags: ['Events', 'Print', 'Digital'] },
   { num: '03', icon: '<i class="fa-solid fa-gem"></i>', title: 'Branding Pack', desc: 'Complete brand identity — logo, palette, typography, full asset library.', tags: ['Identity', 'Guidelines', 'Assets'] },
   { num: '04', icon: '<i class="fa-solid fa-pen-nib"></i>', title: 'Logo Design', desc: 'Distinctive, scalable logos — icons, wordmarks, combination marks.', tags: ['Wordmark', 'Icon', 'Monogram'] },
-  { num: '05', icon: '<i class="fa-solid fa-shirt"></i>', title: 'T-Shirt Mockup', desc: 'Premium apparel mockups for merch drops and clothing lines.', tags: ['Apparel', 'Merch', 'Streetwear'] },
-  { num: '06', icon: '<i class="fa-solid fa-mobile-screen"></i>', title: 'Social Media Kit', desc: 'Cohesive templates and story packs for a memorable online presence.', tags: ['Instagram', 'Templates', 'Stories'] },
+  { num: '05', icon: '<i class="fa-solid fa-shirt"></i>', title: 'T-Shirt Mockup', desc: 'Premium apparel mockups for streetwear brands, merch drops, and clothing lines.', tags: ['Apparel', 'Merch', 'Streetwear'] },
+  { num: '06', icon: '<i class="fa-solid fa-mobile-screen"></i>', title: 'Social Media Kit', desc: 'Cohesive templates and story packs that build a memorable online presence.', tags: ['Instagram', 'Templates', 'Stories'] },
 ];
 
 const svcCarousel = makeCarousel({
@@ -254,38 +267,23 @@ const svcCarousel = makeCarousel({
   dotsId: 'svcDots',
   counterId: 'svcCounter',
   getItems: () => svcData,
-  renderItem: s => `<div class="service-card carousel-card-size" style="padding:32px 24px;">
-    <div class="service-num">${s.num}</div><div class="service-icon">${s.icon}</div>
-    <div class="service-title">${s.title}</div><div class="service-desc">${s.desc}</div>
-    <div class="service-tags">${s.tags.map(t => `<span class="service-tag">${t}</span>`).join('')}</div>
-  </div>`
-});
-
-const testiData = [
-  { quote: 'The branding pack completely transformed how our clients perceive us. Clean, bold, and perfectly aligned with our vision.', name: 'Marcus T.', role: 'CEO, Volta Agency', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80' },
-  { quote: "Incredible attention to detail on our t-shirt mockups. Way beyond expectations — our merch sold out in 3 days.", name: 'Aisha K.', role: 'Founder, StreetDrop', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80' },
-  { quote: 'The event flyer blew everyone away. People were stopping on the street to look at it. Most impactful design work we ever had.', name: 'Daniel R.', role: 'Event Director, Neon Nights', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80' },
-];
-
-const testiCarousel = makeCarousel({
-  trackId: 'testiTrack',
-  prevId: 'testiPrev',
-  nextId: 'testiNext',
-  dotsId: 'testiDots',
-  counterId: 'testiCounter',
-  getItems: () => testiData,
-  renderItem: t => `<div class="testi-card carousel-card-size">
-    <div class="testi-quote">"</div>
-    <p class="testi-text">${t.quote}</p>
-    <div class="testi-author"><img class="testi-avatar" src="${t.img}" alt="${t.name}"/><div><div class="testi-name">${t.name}</div><div class="testi-role">${t.role}</div></div></div>
-  </div>`
+  renderItem: s => {
+    const titleKey = `services.service${s.num}.title`;
+    const descKey = `services.service${s.num}.description`;
+    const title = getTranslation(titleKey) || s.title;
+    const desc = getTranslation(descKey) || s.desc;
+    return `<div class="service-card carousel-card-size" style="padding:32px 24px;">
+      <div class="service-num">${s.num}</div><div class="service-icon">${s.icon}</div>
+      <div class="service-title">${title}</div><div class="service-desc">${desc}</div>
+      <div class="service-tags">${s.tags.map(t => `<span class="service-tag">${t}</span>`).join('')}</div>
+    </div>`;
+  }
 });
 
 function initCarousels() {
   if (window.innerWidth <= 768) {
     portCarousel.render();
     svcCarousel.render();
-    testiCarousel.render();
   }
 }
 

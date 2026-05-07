@@ -57,13 +57,6 @@ window.addEventListener('load', () => {
   loadTranslations(savedLang);
   
   document.getElementById('currentYear').textContent = new Date().getFullYear();
-  
-  setTimeout(() => {
-    const l = document.getElementById('loader');
-    l.style.opacity = '0';
-    l.style.transition = 'opacity .6s ease';
-    setTimeout(() => l.remove(), 700);
-  }, 1800);
 });
 
 const cursor = document.getElementById('cursor');

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FONATE VISUALS — Design Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div id="loader"><div class="loader-text">FONATE VISUALS</div><div class="loader-bar"></div></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <div class="nav-logo">FONATE VISUALS</div>
+  <ul class="nav-links">
+    <li><a href="#work" data-i18n="nav.work">Work</a></li>
+    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    <li class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLanguage('fr')">FR</button>
+    </li>
+  </ul>
+  <button class="nav-cta" data-i18n="nav.hireMe" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work" data-i18n="nav.work" onclick="closeMenu()">Work</a>
+  <a href="#services" data-i18n="nav.services" onclick="closeMenu()">Services</a>
+  <a href="#about" data-i18n="nav.about" onclick="closeMenu()">About</a>
+  <a href="#contact" data-i18n="nav.contact" onclick="closeMenu()">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en');closeMenu()">EN</button>
+    <button class="lang-btn" data-lang="fr" onclick="switchLanguage('fr');closeMenu()">FR</button>
+  </div>
+  <button class="mob-cta" data-i18n="nav.hireMe" onclick="closeMenu();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me →</button>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-tag" data-i18n="hero.tag">Available for Projects</div>
+    <h1 class="hero-title"><span data-i18n="hero.title1">VISUAL</span><br><span data-i18n="hero.title2">DESIGN</span><br><em data-i18n="hero.title3">STUDIO</em></h1>
+    <p class="hero-desc" data-i18n="hero.description">Crafting bold identities, striking visuals, and unforgettable brand experiences that make people stop scrolling.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" data-i18n="hero.viewPortfolio" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View Portfolio</button>
+      <a href="#contact" class="btn-ghost" data-i18n="hero.letsTalk">Let's Talk</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">120+</div><div class="stat-label" data-i18n="hero.projects">Projects</div></div>
+      <div><div class="stat-num">48</div><div class="stat-label" data-i18n="hero.clients">Clients</div></div>
+      <div><div class="stat-num">5★</div><div class="stat-label" data-i18n="hero.rating">Rating</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-grid">
+      <img class="tall" src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80" alt="Design"/>
+      <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Design"/>
+      <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=600&q=80" alt="Design"/>
+    </div>
+    <div class="hero-bg-text">KR</div>
+  </div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item" data-i18n="marquee.brandIdentity">Brand Identity</span>
+    <span class="marquee-item" data-i18n="marquee.logoDesign">Logo Design</span>
+    <span class="marquee-item" data-i18n="marquee.mockupDesign">Mockup Design</span>
+    <span class="marquee-item" data-i18n="marquee.flyerDesign">Flyer Design</span>
+    <span class="marquee-item" data-i18n="marquee.tshirtMockup">T-Shirt Mockup</span>
+    <span class="marquee-item" data-i18n="marquee.socialMedia">Social Media</span>
+    <span class="marquee-item" data-i18n="marquee.packaging">Packaging</span>
+    <span class="marquee-item" data-i18n="marquee.brandingPack">Branding Pack</span>
+    <span class="marquee-item" data-i18n="marquee.brandIdentity">Brand Identity</span>
+    <span class="marquee-item" data-i18n="marquee.logoDesign">Logo Design</span>
+    <span class="marquee-item" data-i18n="marquee.mockupDesign">Mockup Design</span>
+    <span class="marquee-item" data-i18n="marquee.flyerDesign">Flyer Design</span>
+    <span class="marquee-item" data-i18n="marquee.tshirtMockup">T-Shirt Mockup</span>
+    <span class="marquee-item" data-i18n="marquee.socialMedia">Social Media</span>
+    <span class="marquee-item" data-i18n="marquee.packaging">Packaging</span>
+    <span class="marquee-item" data-i18n="marquee.brandingPack">Branding Pack</span>
+  </div>
+</div>
+
+<section id="work" style="padding-bottom:100px;">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label" data-i18n="portfolio.label">Selected Work</div>
+      <h2 class="section-title"><span data-i18n="portfolio.title1">MY</span> <em data-i18n="portfolio.title2">PORTFOLIO</em></h2>
+    </div>
+    <a href="#" class="view-all" data-i18n="portfolio.viewAll">All Projects →</a>
+  </div>
+  <div class="filter-wrap reveal">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-i18n="portfolio.filterAll" onclick="filterWork(this,'all')">All</button>
+      <button class="filter-btn" data-i18n="portfolio.filterMockups" onclick="filterWork(this,'mockup')">Mockups</button>
+      <button class="filter-btn" data-i18n="portfolio.filterFlyers" onclick="filterWork(this,'flyer')">Flyers</button>
+      <button class="filter-btn" data-i18n="portfolio.filterBranding" onclick="filterWork(this,'branding')">Branding</button>
+      <button class="filter-btn" data-i18n="portfolio.filterLogo" onclick="filterWork(this,'logo')">Logo</button>
+      <button class="filter-btn" data-i18n="portfolio.filterTshirt" onclick="filterWork(this,'tshirt')">T-Shirt</button>
+      <button class="filter-btn" data-i18n="portfolio.filterSocial" onclick="filterWork(this,'social')">Social Media</button>
+      <button class="filter-btn" data-i18n="portfolio.filterPackaging" onclick="filterWork(this,'packaging')">Packaging</button>
+    </div>
+  </div>
+
+  <div class="portfolio-grid" id="portfolio-grid">
+    <div class="port-card wide reveal" data-cat="mockup"><span class="port-meta">Mockup</span><img class="port-img" src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=900&q=80" alt="Mockup"/><div class="port-overlay"><div class="port-category">Product Mockup</div><div class="port-name">URBAN ESSENTIALS</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card medium reveal" data-cat="logo"><span class="port-meta">Logo</span><img class="port-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80" alt="Logo"/><div class="port-overlay"><div class="port-category">Logo Design</div><div class="port-name">APEX STUDIOS</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card third reveal" data-cat="flyer"><span class="port-meta">Flyer</span><img class="port-img" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="Flyer"/><div class="port-overlay"><div class="port-category">Event Flyer</div><div class="port-name">NEON NIGHTS</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card third reveal" data-cat="tshirt"><span class="port-meta">T-Shirt</span><img class="port-img" src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80" alt="TShirt"/><div class="port-overlay"><div class="port-category">T-Shirt Mockup</div><div class="port-name">STREETWEAR DROP</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card third reveal" data-cat="branding"><span class="port-meta">Branding</span><img class="port-img" src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80" alt="Branding"/><div class="port-overlay"><div class="port-category">Brand Identity</div><div class="port-name">LUXE COSMETICS</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card half reveal" data-cat="branding"><span class="port-meta">Branding Pack</span><img class="port-img" src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80" alt="Branding Pack"/><div class="port-overlay"><div class="port-category">Branding Pack</div><div class="port-name">VOLTA AGENCY</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card half reveal" data-cat="social"><span class="port-meta">Social Media</span><img class="port-img" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&q=80" alt="Social"/><div class="port-overlay"><div class="port-category">Social Media Kit</div><div class="port-name">PULSE NUTRITION</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card third reveal" data-cat="packaging"><span class="port-meta">Packaging</span><img class="port-img" src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=600&q=80" alt="Packaging"/><div class="port-overlay"><div class="port-category">Packaging Design</div><div class="port-name">MATCHA RITUAL</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card third reveal" data-cat="flyer"><span class="port-meta">Flyer</span><img class="port-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Flyer2"/><div class="port-overlay"><div class="port-category">Event Flyer</div><div class="port-name">SUMMIT CONFERENCE</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card third reveal" data-cat="mockup"><span class="port-meta">Mockup</span><img class="port-img" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80" alt="Mockup2"/><div class="port-overlay"><div class="port-category">Product Mockup</div><div class="port-name">SCENT COLLECTION</div><div class="port-arrow">→</div></div></div>
+    <div class="port-card full reveal special-card" data-cat="branding" onclick="window.location.href='branding-showcase.html'">
+      <span class="port-meta">Full Brand Identity</span>
+      <img class="port-img" src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?w=1400&q=80" alt="Full Brand"/>
+      <div class="port-overlay special-overlay">
+        <div class="port-category">Complete Branding</div>
+        <div class="port-name">NORTHWAVE COLLECTIVE</div>
+        <p class="port-description" data-i18n="portfolio.brandingDesc">Explore a complete brand identity package including logo design, visual guidelines, mockups, marketing materials, and social media assets.</p>
+        <button class="view-branding-btn" data-i18n="portfolio.viewBranding">View Full Branding Kit →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-carousel" id="portCarousel">
+    <div class="carousel-track-wrap"><div class="carousel-track" id="portTrack"></div></div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="portPrev">←</button>
+      <div class="carousel-dots" id="portDots"></div>
+      <div class="carousel-counter" id="portCounter">1/11</div>
+      <button class="carousel-btn" id="portNext">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label" data-i18n="services.label">What I Offer</div>
+      <h2 class="section-title"><span data-i18n="services.title1">MY</span> <em data-i18n="services.title2">SERVICES</em></h2>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal"><div class="service-num">01</div><div class="service-icon"><i class="fa-solid fa-image"></i></div><div class="service-title" data-i18n="services.service1.title">Mockup Design</div><div class="service-desc" data-i18n="services.service1.description">Photorealistic product mockups from packaging to phones, apparel to print.</div><div class="service-tags"><span class="service-tag">Product</span><span class="service-tag">3D</span><span class="service-tag">Print</span></div></div>
+    <div class="service-card reveal"><div class="service-num">02</div><div class="service-icon"><i class="fa-solid fa-file-lines"></i></div><div class="service-title" data-i18n="services.service2.title">Flyer Design</div><div class="service-desc" data-i18n="services.service2.description">Eye-stopping event flyers and printed marketing assets that demand attention.</div><div class="service-tags"><span class="service-tag">Events</span><span class="service-tag">Print</span><span class="service-tag">Digital</span></div></div>
+    <div class="service-card reveal"><div class="service-num">03</div><div class="service-icon"><i class="fa-solid fa-gem"></i></div><div class="service-title" data-i18n="services.service3.title">Branding Pack</div><div class="service-desc" data-i18n="services.service3.description">Complete brand identity — logo, palette, typography, full asset library.</div><div class="service-tags"><span class="service-tag">Identity</span><span class="service-tag">Guidelines</span><span class="service-tag">Assets</span></div></div>
+    <div class="service-card reveal"><div class="service-num">04</div><div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div><div class="service-title" data-i18n="services.service4.title">Logo Design</div><div class="service-desc" data-i18n="services.service4.description">Distinctive, scalable logos — icons, wordmarks, combination marks.</div><div class="service-tags"><span class="service-tag">Wordmark</span><span class="service-tag">Icon</span><span class="service-tag">Monogram</span></div></div>
+    <div class="service-card reveal"><div class="service-num">05</div><div class="service-icon"><i class="fa-solid fa-shirt"></i></div><div class="service-title" data-i18n="services.service5.title">T-Shirt Mockup</div><div class="service-desc" data-i18n="services.service5.description">Premium apparel mockups for streetwear brands, merch drops, and clothing lines.</div><div class="service-tags"><span class="service-tag">Apparel</span><span class="service-tag">Merch</span><span class="service-tag">Streetwear</span></div></div>
+    <div class="service-card reveal"><div class="service-num">06</div><div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div><div class="service-title" data-i18n="services.service6.title">Social Media Kit</div><div class="service-desc" data-i18n="services.service6.description">Cohesive templates and story packs that build a memorable online presence.</div><div class="service-tags"><span class="service-tag">Instagram</span><span class="service-tag">Templates</span><span class="service-tag">Stories</span></div></div>
+  </div>
+  <div class="services-carousel" id="svcCarousel">
+    <div class="carousel-track-wrap"><div class="carousel-track" id="svcTrack"></div></div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="svcPrev">←</button>
+      <div class="carousel-dots" id="svcDots"></div>
+      <div class="carousel-counter" id="svcCounter">1/6</div>
+      <button class="carousel-btn" id="svcNext">→</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-section">
+    <div class="about-img-wrap reveal">
+      <img class="about-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Designer"/>
+      <div class="about-img-badge"><span class="big">5+</span><span class="sm" data-i18n="about.badge">YRS EXP</span></div>
+    </div>
+    <div class="about-content reveal">
+      <div class="section-label" data-i18n="about.label">About Me</div>
+      <h2 class="section-title" style="margin-bottom:24px;"><span data-i18n="about.title1">DESIGN</span> <em data-i18n="about.title2">IS MY</em> <span data-i18n="about.title3">LANGUAGE</span></h2>
+      <p class="about-desc" data-i18n="about.description1">I'm a graphic designer obsessed with bold typography, smart strategy, and visual storytelling. Every project is a chance to build something that makes an impact.</p>
+      <p class="about-desc" data-i18n="about.description2">From complete brand identities for startups to streetwear mockups for global drops — same level of precision and passion in everything I create.</p>
+      <div class="skills-list">
+        <span class="skill-pill">Illustrator</span><span class="skill-pill">Photoshop</span><span class="skill-pill">Figma</span><span class="skill-pill">After Effects</span><span class="skill-pill">InDesign</span><span class="skill-pill">Brand Strategy</span><span class="skill-pill">Typography</span><span class="skill-pill">Print Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testi-section">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label" data-i18n="testimonials.label">Client Love</div>
+      <h2 class="section-title"><span data-i18n="testimonials.title1">WHAT THEY</span> <em data-i18n="testimonials.title2">SAY</em></h2>
+    </div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal"><div class="testi-quote">"</div><p class="testi-text">The branding pack completely transformed how our clients perceive us. Clean, bold, and perfectly aligned with our vision.</p><div class="testi-author"><img class="testi-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Client"/><div><div class="testi-name">Marcus T.</div><div class="testi-role">CEO, Volta Agency</div></div></div></div>
+    <div class="testi-card reveal"><div class="testi-quote">"</div><p class="testi-text">Incredible attention to detail on our t-shirt mockups. Way beyond expectations — our merch sold out in 3 days.</p><div class="testi-author"><img class="testi-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Client"/><div><div class="testi-name">Aisha K.</div><div class="testi-role">Founder, StreetDrop</div></div></div></div>
+    <div class="testi-card reveal"><div class="testi-quote">"</div><p class="testi-text">The event flyer blew everyone away. People were stopping on the street to look at it. Most impactful design work we've ever had.</p><div class="testi-author"><img class="testi-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Client"/><div><div class="testi-name">Daniel R.</div><div class="testi-role">Event Director, Neon Nights</div></div></div></div>
+  </div>
+  <div class="testi-carousel" id="testiCarousel">
+    <div class="carousel-track-wrap"><div class="carousel-track" id="testiTrack"></div></div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="testiPrev">←</button>
+      <div class="carousel-dots" id="testiDots"></div>
+      <div class="carousel-counter" id="testiCounter">1/3</div>
+      <button class="carousel-btn" id="testiNext">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="reveal">
+    <div class="section-label" style="justify-content:center;" data-i18n="contact.label">Start a Project</div>
+    <h2 class="section-title"><span data-i18n="contact.title1">GOT A</span> <em data-i18n="contact.title2">PROJECT?</em></h2>
+    <div class="contact-big"><a href="mailto:developerfonate@gmail.com">developerfonate@gmail.com</a></div>
+    <div class="contact-big" style="margin-top:20px;display:flex;align-items:center;justify-content:center;gap:15px;"><i class="fa-brands fa-whatsapp" style="font-size:clamp(32px,6vw,80px);color:var(--accent);"></i><a href="https://wa.me/237621793565" target="_blank" style="font-size:clamp(28px,5vw,70px);">+237 621 793 565</a></div>
+    <p style="color:var(--muted);font-size:14px;max-width:420px;margin:0 auto;line-height:1.7;" data-i18n="contact.description">Currently accepting new projects. Let's build something people can't stop looking at.</p>
+    <div class="contact-social">
+      <a href="https://wa.me/237621793565" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="contact.whatsapp">WhatsApp</span></a>
+      <a href="https://www.instagram.com/developerfonate" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> <span data-i18n="contact.instagram">Instagram</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">FONATE VISUALS</div>
+  <div class="footer-text"><span data-i18n="footer.copyright">© </span><span id="currentYear"></span><span data-i18n="footer.copyrightText"> Fonate Visuals. All rights reserved.</span></div>
+  <div class="footer-text" data-i18n="footer.tagline">Made by Fonate Michael</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

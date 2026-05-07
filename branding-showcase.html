@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complete Branding Package - FONATE VISUALS</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.showcase-header{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,rgba(245,230,66,.1) 0%,transparent 100%);padding:calc(var(--nav-h) + 60px) 48px 60px;position:relative;overflow:hidden;}
+.showcase-header::before{content:'BRANDING';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(100px,20vw,300px);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.03);pointer-events:none;white-space:nowrap;}
+.showcase-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,120px);line-height:.95;margin-bottom:20px;position:relative;z-index:1;}
+.showcase-subtitle{font-size:18px;color:var(--muted);max-width:600px;margin:0 auto 30px;position:relative;z-index:1;}
+.showcase-meta{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:40px;position:relative;z-index:1;}
+.meta-item{text-align:center;}
+.meta-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.meta-value{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--accent);}
+.showcase-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;padding:80px 48px;}
+.showcase-item{background:var(--card);border:1px solid var(--border);overflow:hidden;position:relative;transition:transform .4s,border-color .3s;}
+.showcase-item:hover{transform:translateY(-6px);border-color:var(--accent);}
+.showcase-item.large{grid-column:span 12;}
+.showcase-item.half{grid-column:span 6;}
+.showcase-item.third{grid-column:span 4;}
+.showcase-img{width:100%;height:100%;object-fit:cover;display:block;}
+.showcase-item.large .showcase-img{aspect-ratio:21/9;}
+.showcase-item.half .showcase-img{aspect-ratio:16/10;}
+.showcase-item.third .showcase-img{aspect-ratio:4/5;}
+.showcase-label{position:absolute;top:20px;left:20px;background:rgba(0,0,0,.85);backdrop-filter:blur(10px);border:1px solid var(--border);padding:8px 16px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);}
+.section-divider{padding:60px 48px;text-align:center;}
+.divider-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,64px);color:var(--text);margin-bottom:12px;}
+.divider-line{width:100px;height:3px;background:var(--accent);margin:0 auto;}
+.showcase-carousel{display:none;position:relative;padding:0 20px 40px;}
+.showcase-carousel .carousel-track-wrap{overflow:hidden;}
+.showcase-carousel .carousel-track{display:flex;gap:14px;transition:transform .45s cubic-bezier(.17,.67,.35,.99);}
+.showcase-carousel .carousel-card{flex:0 0 calc(85vw - 20px);min-width:0;}
+.showcase-carousel .showcase-img{aspect-ratio:4/3;}
+
+@media(max-width:768px){
+  .showcase-grid{display:none;}
+  .showcase-carousel{display:block;}
+  .showcase-header{padding:calc(var(--nav-h) + 40px) 20px 40px;}
+  .section-divider{padding:40px 20px;}
+  .contact-section{padding:60px 20px!important;}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <div class="nav-logo">FONATE VISUALS</div>
+  <ul class="nav-links">
+    <li><a href="index.html#work" data-i18n="nav.work">Work</a></li>
+    <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+    <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+    <li class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLanguage('fr')">FR</button>
+    </li>
+  </ul>
+  <button class="nav-cta" data-i18n="nav.hireMe" onclick="window.location.href='index.html#contact'">Hire Me</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#work" data-i18n="nav.work" onclick="closeMenu()">Work</a>
+  <a href="index.html#services" data-i18n="nav.services" onclick="closeMenu()">Services</a>
+  <a href="index.html#about" data-i18n="nav.about" onclick="closeMenu()">About</a>
+  <a href="index.html#contact" data-i18n="nav.contact" onclick="closeMenu()">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en');closeMenu()">EN</button>
+    <button class="lang-btn" data-lang="fr" onclick="switchLanguage('fr');closeMenu()">FR</button>
+  </div>
+  <button class="mob-cta" data-i18n="nav.hireMe" onclick="closeMenu();window.location.href='index.html#contact'">Hire Me →</button>
+</div>
+
+<div class="showcase-header">
+  <div>
+    <h1 class="showcase-title">NORTHWAVE COLLECTIVE<br><span style="color:var(--accent);" data-i18n="showcase.subtitle">COMPLETE BRANDING</span></h1>
+    <p class="showcase-subtitle" data-i18n="showcase.description">A comprehensive brand identity system including logo design, visual guidelines, marketing materials, and digital assets.</p>
+  </div>
+</div>
+
+<div class="section-divider">
+  <h2 class="divider-title" data-i18n="showcase.logoTitle">LOGO DESIGN</h2>
+  <div class="divider-line"></div>
+</div>
+
+<div class="showcase-grid">
+  <div class="showcase-item large">
+    <span class="showcase-label">Primary Logo</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1400&q=80" alt="Primary Logo"/>
+  </div>
+  <div class="showcase-item half">
+    <span class="showcase-label">Logo Variations</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Logo Variations"/>
+  </div>
+  <div class="showcase-item half">
+    <span class="showcase-label">Logo on Dark</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&q=80" alt="Logo Dark"/>
+  </div>
+</div>
+
+<div class="showcase-carousel" id="logoCarousel">
+  <div class="carousel-track-wrap"><div class="carousel-track" id="logoTrack"></div></div>
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="logoPrev">←</button>
+    <div class="carousel-dots" id="logoDots"></div>
+    <div class="carousel-counter" id="logoCounter">1/3</div>
+    <button class="carousel-btn" id="logoNext">→</button>
+  </div>
+</div>
+
+<div class="section-divider">
+  <h2 class="divider-title" data-i18n="showcase.guidelinesTitle">BRAND GUIDELINES</h2>
+  <div class="divider-line"></div>
+</div>
+
+<div class="showcase-grid">
+  <div class="showcase-item third">
+    <span class="showcase-label">Color Palette</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80" alt="Colors"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Typography</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80" alt="Typography"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Brand Patterns</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=600&q=80" alt="Patterns"/>
+  </div>
+</div>
+
+<div class="showcase-carousel" id="guidelinesCarousel">
+  <div class="carousel-track-wrap"><div class="carousel-track" id="guidelinesTrack"></div></div>
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="guidelinesPrev">←</button>
+    <div class="carousel-dots" id="guidelinesDots"></div>
+    <div class="carousel-counter" id="guidelinesCounter">1/3</div>
+    <button class="carousel-btn" id="guidelinesNext">→</button>
+  </div>
+</div>
+
+<div class="section-divider">
+  <h2 class="divider-title" data-i18n="showcase.mockupsTitle">MOCKUPS & APPLICATIONS</h2>
+  <div class="divider-line"></div>
+</div>
+
+<div class="showcase-grid">
+  <div class="showcase-item large">
+    <span class="showcase-label">Stationery Set</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=1400&q=80" alt="Stationery"/>
+  </div>
+  <div class="showcase-item half">
+    <span class="showcase-label">Business Cards</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?w=800&q=80" alt="Business Cards"/>
+  </div>
+  <div class="showcase-item half">
+    <span class="showcase-label">Packaging Design</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=800&q=80" alt="Packaging"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Apparel Mockup</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80" alt="Apparel"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Tote Bag</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80" alt="Tote Bag"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Coffee Cup</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Coffee Cup"/>
+  </div>
+</div>
+
+<div class="showcase-carousel" id="mockupsCarousel">
+  <div class="carousel-track-wrap"><div class="carousel-track" id="mockupsTrack"></div></div>
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="mockupsPrev">←</button>
+    <div class="carousel-dots" id="mockupsDots"></div>
+    <div class="carousel-counter" id="mockupsCounter">1/6</div>
+    <button class="carousel-btn" id="mockupsNext">→</button>
+  </div>
+</div>
+
+<div class="section-divider">
+  <h2 class="divider-title" data-i18n="showcase.marketingTitle">MARKETING MATERIALS</h2>
+  <div class="divider-line"></div>
+</div>
+
+<div class="showcase-grid">
+  <div class="showcase-item half">
+    <span class="showcase-label">Event Flyer</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80" alt="Flyer"/>
+  </div>
+  <div class="showcase-item half">
+    <span class="showcase-label">Poster Design</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Poster"/>
+  </div>
+  <div class="showcase-item large">
+    <span class="showcase-label">Billboard Design</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1400&q=80" alt="Billboard"/>
+  </div>
+</div>
+
+<div class="showcase-carousel" id="marketingCarousel">
+  <div class="carousel-track-wrap"><div class="carousel-track" id="marketingTrack"></div></div>
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="marketingPrev">←</button>
+    <div class="carousel-dots" id="marketingDots"></div>
+    <div class="carousel-counter" id="marketingCounter">1/3</div>
+    <button class="carousel-btn" id="marketingNext">→</button>
+  </div>
+</div>
+
+<div class="section-divider">
+  <h2 class="divider-title" data-i18n="showcase.socialTitle">SOCIAL MEDIA</h2>
+  <div class="divider-line"></div>
+</div>
+
+<div class="showcase-grid">
+  <div class="showcase-item third">
+    <span class="showcase-label">Instagram Post</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80" alt="Instagram"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Story Template</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Story"/>
+  </div>
+  <div class="showcase-item third">
+    <span class="showcase-label">Social Banner</span>
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=600&q=80" alt="Banner"/>
+  </div>
+</div>
+
+<div class="showcase-carousel" id="socialCarousel">
+  <div class="carousel-track-wrap"><div class="carousel-track" id="socialTrack"></div></div>
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="socialPrev">←</button>
+    <div class="carousel-dots" id="socialDots"></div>
+    <div class="carousel-counter" id="socialCounter">1/3</div>
+    <button class="carousel-btn" id="socialNext">→</button>
+  </div>
+</div>
+
+<section class="contact-section" style="padding:100px 48px;">
+  <div>
+    <div class="section-label" style="justify-content:center;" data-i18n="showcase.contactLabel">Interested in a Complete Branding Package?</div>
+    <h2 class="section-title"><span data-i18n="showcase.contactTitle1">LET'S CREATE</span><br><em data-i18n="showcase.contactTitle2">YOUR BRAND</em></h2>
+    <div class="contact-big"><a href="mailto:developerfonate@gmail.com">developerfonate@gmail.com</a></div>
+    <div class="contact-big" style="margin-top:20px;display:flex;align-items:center;justify-content:center;gap:15px;"><i class="fa-brands fa-whatsapp" style="font-size:clamp(32px,6vw,80px);color:var(--accent);"></i><a href="https://wa.me/237621793565" target="_blank" style="font-size:clamp(28px,5vw,70px);">+237 621 793 565</a></div>
+    <div class="contact-social" style="margin-top:40px;">
+      <a href="https://wa.me/237621793565" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.instagram.com/developerfonate" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">FONATE VISUALS</div>
+  <div class="footer-text"><span>© </span><span id="currentYear"></span><span> Fonate Visuals. All rights reserved.</span></div>
+  <div class="footer-text">Made by Fonate Michael</div>
+</footer>
+
+<script>
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+let currentLang = 'en';
+let translations = {};
+
+async function loadTranslations(lang) {
+  try {
+    const response = await fetch(`lang-${lang}.json`);
+    translations = await response.json();
+    updatePageContent();
+    currentLang = lang;
+    localStorage.setItem('preferredLang', lang);
+    updateLangButtons();
+  } catch (error) {
+    console.error('Error loading translations:', error);
+  }
+}
+
+function updatePageContent() {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const keys = key.split('.');
+    let value = translations;
+    for (const k of keys) {
+      value = value[k];
+      if (!value) break;
+    }
+    if (value) {
+      element.textContent = value;
+    }
+  });
+}
+
+function updateLangButtons() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === currentLang);
+  });
+}
+
+function switchLanguage(lang) {
+  loadTranslations(lang);
+}
+
+const savedLang = localStorage.getItem('preferredLang') || 'en';
+loadTranslations(savedLang);
+
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX;
+  my = e.clientY;
+  cursor.style.transform = `translate(${mx - 6}px,${my - 6}px)`;
+});
+
+(function animRing() {
+  rx += (mx - rx) * .12;
+  ry += (my - ry) * .12;
+  ring.style.transform = `translate(${rx - 20}px,${ry - 20}px)`;
+  requestAnimationFrame(animRing);
+})();
+
+document.querySelectorAll('a,button,.showcase-item').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    ring.style.width = '60px';
+    ring.style.height = '60px';
+  });
+  el.addEventListener('mouseleave', () => {
+    ring.style.width = '40px';
+    ring.style.height = '40px';
+  });
+});
+
+const ham = document.getElementById('hamburger');
+const mmenu = document.getElementById('mobileMenu');
+
+function closeMenu() {
+  ham.classList.remove('open');
+  mmenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+ham.addEventListener('click', () => {
+  const o = ham.classList.toggle('open');
+  mmenu.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.background = window.scrollY > 50 ? 'rgba(10,10,10,.97)' : 'rgba(10,10,10,.85)';
+});
+
+function makeCarousel(opts) {
+  const track = document.getElementById(opts.trackId);
+  const prev = document.getElementById(opts.prevId);
+  const next = document.getElementById(opts.nextId);
+  const dotsEl = document.getElementById(opts.dotsId);
+  const counter = document.getElementById(opts.counterId);
+  let cur = 0, items = opts.items, startX = 0, startTime = 0;
+
+  function render() {
+    track.innerHTML = items.map(item => `<div class="showcase-item carousel-card">
+      <span class="showcase-label">${item.label}</span>
+      <img class="showcase-img" src="${item.img}" alt="${item.label}" loading="lazy"/>
+    </div>`).join('');
+    dotsEl.innerHTML = items.map((_, i) => `<button class="carousel-dot${i === 0 ? ' active' : ''}" onclick="void(0)"></button>`).join('');
+    cur = 0;
+    update();
+  }
+
+  function cardWidth() {
+    const c = track.firstElementChild;
+    return c ? c.offsetWidth + 14 : 0;
+  }
+
+  function update() {
+    track.style.transform = `translateX(-${cur * cardWidth()}px)`;
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+    counter.textContent = `${cur + 1}/${items.length}`;
+    prev.style.opacity = cur === 0 ? '.3' : '1';
+    next.style.opacity = cur === items.length - 1 ? '.3' : '1';
+  }
+
+  function goTo(n) {
+    cur = Math.max(0, Math.min(items.length - 1, n));
+    update();
+  }
+
+  prev.addEventListener('click', () => goTo(cur - 1));
+  next.addEventListener('click', () => goTo(cur + 1));
+
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startTime = Date.now();
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dt = Date.now() - startTime;
+    if (Math.abs(dx) > 36 && dt < 400) {
+      dx < 0 ? goTo(cur + 1) : goTo(cur - 1);
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    setTimeout(update, 100);
+  });
+
+  return { render };
+}
+
+const logoData = [
+  { label: 'Primary Logo', img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80' },
+  { label: 'Logo Variations', img: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80' },
+  { label: 'Logo on Dark', img: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&q=80' }
+];
+
+const guidelinesData = [
+  { label: 'Color Palette', img: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80' },
+  { label: 'Typography', img: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80' },
+  { label: 'Brand Patterns', img: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=600&q=80' }
+];
+
+const mockupsData = [
+  { label: 'Stationery Set', img: 'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&q=80' },
+  { label: 'Business Cards', img: 'https://images.unsplash.com/photo-1621600411688-4be93cd68504?w=800&q=80' },
+  { label: 'Packaging Design', img: 'https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=800&q=80' },
+  { label: 'Apparel Mockup', img: 'https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80' },
+  { label: 'Tote Bag', img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80' },
+  { label: 'Coffee Cup', img: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80' }
+];
+
+const marketingData = [
+  { label: 'Event Flyer', img: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80' },
+  { label: 'Poster Design', img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80' },
+  { label: 'Billboard Design', img: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80' }
+];
+
+const socialData = [
+  { label: 'Instagram Post', img: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80' },
+  { label: 'Story Template', img: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80' },
+  { label: 'Social Banner', img: 'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=600&q=80' }
+];
+
+const logoCarousel = makeCarousel({ trackId: 'logoTrack', prevId: 'logoPrev', nextId: 'logoNext', dotsId: 'logoDots', counterId: 'logoCounter', items: logoData });
+const guidelinesCarousel = makeCarousel({ trackId: 'guidelinesTrack', prevId: 'guidelinesPrev', nextId: 'guidelinesNext', dotsId: 'guidelinesDots', counterId: 'guidelinesCounter', items: guidelinesData });
+const mockupsCarousel = makeCarousel({ trackId: 'mockupsTrack', prevId: 'mockupsPrev', nextId: 'mockupsNext', dotsId: 'mockupsDots', counterId: 'mockupsCounter', items: mockupsData });
+const marketingCarousel = makeCarousel({ trackId: 'marketingTrack', prevId: 'marketingPrev', nextId: 'marketingNext', dotsId: 'marketingDots', counterId: 'marketingCounter', items: marketingData });
+const socialCarousel = makeCarousel({ trackId: 'socialTrack', prevId: 'socialPrev', nextId: 'socialNext', dotsId: 'socialDots', counterId: 'socialCounter', items: socialData });
+
+function initCarousels() {
+  if (window.innerWidth <= 768) {
+    logoCarousel.render();
+    guidelinesCarousel.render();
+    mockupsCarousel.render();
+    marketingCarousel.render();
+    socialCarousel.render();
+  }
+}
+
+initCarousels();
+let rt;
+window.addEventListener('resize', () => {
+  clearTimeout(rt);
+  rt = setTimeout(initCarousels, 250);
+});
+</script>
+</body>
+</html>

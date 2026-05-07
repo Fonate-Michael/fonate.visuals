@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "work": "Travaux",
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact",
+    "hireMe": "Engagez-Moi"
+  },
+  "hero": {
+    "tag": "Disponible pour Projets",
+    "title1": "STUDIO",
+    "title2": "DESIGN",
+    "title3": "VISUEL",
+    "description": "Créer des identités audacieuses, des visuels saisissants et des expériences de marque inoubliables qui captivent l'attention.",
+    "viewPortfolio": "Voir Portfolio",
+    "letsTalk": "Discutons",
+    "projects": "Projets",
+    "clients": "Clients",
+    "rating": "Note"
+  },
+  "marquee": {
+    "brandIdentity": "Identité de Marque",
+    "logoDesign": "Design de Logo",
+    "mockupDesign": "Design de Maquette",
+    "flyerDesign": "Design de Flyer",
+    "tshirtMockup": "Maquette T-Shirt",
+    "socialMedia": "Réseaux Sociaux",
+    "packaging": "Emballage",
+    "brandingPack": "Pack de Branding"
+  },
+  "portfolio": {
+    "label": "Travaux Sélectionnés",
+    "title1": "MON",
+    "title2": "PORTFOLIO",
+    "viewAll": "Tous les Projets →",
+    "filterAll": "Tous",
+    "filterMockups": "Maquettes",
+    "filterFlyers": "Flyers",
+    "filterBranding": "Branding",
+    "filterLogo": "Logo",
+    "filterTshirt": "T-Shirt",
+    "filterSocial": "Réseaux Sociaux",
+    "filterPackaging": "Emballage",
+    "brandingDesc": "Explorez un package d'identité de marque complet comprenant la conception de logo, les directives visuelles, les maquettes, les supports marketing et les actifs de médias sociaux.",
+    "viewBranding": "Voir le Kit de Branding Complet →"
+  },
+  "services": {
+    "label": "Ce Que J'Offre",
+    "title1": "MES",
+    "title2": "SERVICES",
+    "service1": {
+      "title": "Design de Maquette",
+      "description": "Maquettes de produits photoréalistes, de l'emballage aux téléphones, vêtements et impression."
+    },
+    "service2": {
+      "title": "Design de Flyer",
+      "description": "Flyers d'événements accrocheurs et supports marketing imprimés qui attirent l'attention."
+    },
+    "service3": {
+      "title": "Pack de Branding",
+      "description": "Identité de marque complète — logo, palette, typographie, bibliothèque d'actifs complète."
+    },
+    "service4": {
+      "title": "Design de Logo",
+      "description": "Logos distinctifs et évolutifs — icônes, marques verbales, marques combinées."
+    },
+    "service5": {
+      "title": "Maquette T-Shirt",
+      "description": "Maquettes de vêtements premium pour marques streetwear, drops de merch et lignes de vêtements."
+    },
+    "service6": {
+      "title": "Kit Réseaux Sociaux",
+      "description": "Modèles cohérents et packs de stories pour une présence en ligne mémorable."
+    }
+  },
+  "about": {
+    "label": "À Propos de Moi",
+    "title1": "LE DESIGN",
+    "title2": "EST MON",
+    "title3": "LANGAGE",
+    "badge": "ANS EXP",
+    "description1": "Je suis un designer graphique obsédé par la typographie audacieuse, la stratégie intelligente et la narration visuelle. Chaque projet est une chance de créer quelque chose qui a un impact.",
+    "description2": "Des identités de marque complètes pour startups aux maquettes streetwear pour drops mondiaux — même niveau de précision et passion dans tout ce que je crée."
+  },
+  "testimonials": {
+    "label": "Amour Client",
+    "title1": "CE QU'ILS",
+    "title2": "DISENT"
+  },
+  "contact": {
+    "label": "Démarrer un Projet",
+    "title1": "UN",
+    "title2": "PROJET?",
+    "description": "J'accepte actuellement de nouveaux projets. Construisons quelque chose que les gens ne peuvent pas arrêter de regarder.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "showcase": {
+    "subtitle": "BRANDING COMPLET",
+    "description": "Un système d'identité de marque complet comprenant la conception de logo, les directives visuelles, les supports marketing et les actifs numériques.",
+    "client": "Client",
+    "year": "Année",
+    "services": "Services",
+    "servicesValue": "Branding Complet",
+    "logoTitle": "CONCEPTION DE LOGO",
+    "guidelinesTitle": "DIRECTIVES DE MARQUE",
+    "mockupsTitle": "MAQUETTES & APPLICATIONS",
+    "marketingTitle": "SUPPORTS MARKETING",
+    "socialTitle": "RÉSEAUX SOCIAUX",
+    "contactLabel": "Intéressé par un Package de Branding Complet?",
+    "contactTitle1": "CRÉONS",
+    "contactTitle2": "VOTRE MARQUE"
+  },
+  "footer": {
+    "copyright": "© ",
+    "copyrightText": " Fonate Visuals. Tous droits réservés.",
+    "tagline": "Créé par Fonate Michael"
+  }
+}

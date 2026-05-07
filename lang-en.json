@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "hireMe": "Hire Me"
+  },
+  "hero": {
+    "tag": "Available for Projects",
+    "title1": "VISUAL",
+    "title2": "DESIGN",
+    "title3": "STUDIO",
+    "description": "Crafting bold identities, striking visuals, and unforgettable brand experiences that make people stop scrolling.",
+    "viewPortfolio": "View Portfolio",
+    "letsTalk": "Let's Talk",
+    "projects": "Projects",
+    "clients": "Clients",
+    "rating": "Rating"
+  },
+  "marquee": {
+    "brandIdentity": "Brand Identity",
+    "logoDesign": "Logo Design",
+    "mockupDesign": "Mockup Design",
+    "flyerDesign": "Flyer Design",
+    "tshirtMockup": "T-Shirt Mockup",
+    "socialMedia": "Social Media",
+    "packaging": "Packaging",
+    "brandingPack": "Branding Pack"
+  },
+  "portfolio": {
+    "label": "Selected Work",
+    "title1": "MY",
+    "title2": "PORTFOLIO",
+    "viewAll": "All Projects →",
+    "filterAll": "All",
+    "filterMockups": "Mockups",
+    "filterFlyers": "Flyers",
+    "filterBranding": "Branding",
+    "filterLogo": "Logo",
+    "filterTshirt": "T-Shirt",
+    "filterSocial": "Social Media",
+    "filterPackaging": "Packaging",
+    "brandingDesc": "Explore a complete brand identity package including logo design, visual guidelines, mockups, marketing materials, and social media assets.",
+    "viewBranding": "View Full Branding Kit →"
+  },
+  "services": {
+    "label": "What I Offer",
+    "title1": "MY",
+    "title2": "SERVICES",
+    "service1": {
+      "title": "Mockup Design",
+      "description": "Photorealistic product mockups from packaging to phones, apparel to print."
+    },
+    "service2": {
+      "title": "Flyer Design",
+      "description": "Eye-stopping event flyers and printed marketing assets that demand attention."
+    },
+    "service3": {
+      "title": "Branding Pack",
+      "description": "Complete brand identity — logo, palette, typography, full asset library."
+    },
+    "service4": {
+      "title": "Logo Design",
+      "description": "Distinctive, scalable logos — icons, wordmarks, combination marks."
+    },
+    "service5": {
+      "title": "T-Shirt Mockup",
+      "description": "Premium apparel mockups for streetwear brands, merch drops, and clothing lines."
+    },
+    "service6": {
+      "title": "Social Media Kit",
+      "description": "Cohesive templates and story packs that build a memorable online presence."
+    }
+  },
+  "about": {
+    "label": "About Me",
+    "title1": "DESIGN",
+    "title2": "IS MY",
+    "title3": "LANGUAGE",
+    "badge": "YRS EXP",
+    "description1": "I'm a graphic designer obsessed with bold typography, smart strategy, and visual storytelling. Every project is a chance to build something that makes an impact.",
+    "description2": "From complete brand identities for startups to streetwear mockups for global drops — same level of precision and passion in everything I create."
+  },
+  "testimonials": {
+    "label": "Client Love",
+    "title1": "WHAT THEY",
+    "title2": "SAY"
+  },
+  "contact": {
+    "label": "Start a Project",
+    "title1": "GOT A",
+    "title2": "PROJECT?",
+    "description": "Currently accepting new projects. Let's build something people can't stop looking at.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "showcase": {
+    "subtitle": "COMPLETE BRANDING",
+    "description": "A comprehensive brand identity system including logo design, visual guidelines, marketing materials, and digital assets.",
+    "client": "Client",
+    "year": "Year",
+    "services": "Services",
+    "servicesValue": "Full Branding",
+    "logoTitle": "LOGO DESIGN",
+    "guidelinesTitle": "BRAND GUIDELINES",
+    "mockupsTitle": "MOCKUPS & APPLICATIONS",
+    "marketingTitle": "MARKETING MATERIALS",
+    "socialTitle": "SOCIAL MEDIA",
+    "contactLabel": "Interested in a Complete Branding Package?",
+    "contactTitle1": "LET'S CREATE",
+    "contactTitle2": "YOUR BRAND"
+  },
+  "footer": {
+    "copyright": "© ",
+    "copyrightText": " Fonate Visuals. All rights reserved.",
+    "tagline": "Made by Fonate Michael"
+  }
+}
